@@ -1,0 +1,27 @@
+#create-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#create-container h1 {
+  color: #7652ff;
+}
+
+#create-input-container {
+  width: 500px;
+}
+
+#create-button {
+  border-width: 4px;
+  border-color: #7652ff;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+#create-button span {
+  font-size: 20px;
+  color: #7652ff;
+}
