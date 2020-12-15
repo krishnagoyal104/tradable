@@ -1,0 +1,18 @@
+#explore-container {
+  display: flex;
+  height: 100vh;
+  padding-top: 30px;
+}
+
+#sidebar {
+  width: 200px;
+  position: fixed;
+  background-color: green;
+}
+
+#explore-asset-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
