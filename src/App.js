@@ -1,5 +1,6 @@
 import Router from './router/router';
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './css/index.css';
 
 function App() {
   return (
