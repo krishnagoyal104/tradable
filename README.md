@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+# Trelix: A marketplace for tradable relics
+## Overview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Trelix is a marketplace for in-game digital goods like items, skins and collectibles, that facilitates de-centralized exchange of these assets as NFTs.
+
+## Market requirement
+A large number of online multiplayer games provide in-game items with randomly generated modifiers, that determine the quality and rarity of the items. These games usually also support extensive customization of play styles that depend on the availability of specific gear. Contemporarily popular strategic trends or ‘Meta’, as gamers call it, are always in development influencing the demand and price of items. Such games widely benefit from an active marketplace that facilitates a frictionless exchange of goods.
+
+## Features
+* De-centralized marketplace for in-game assets as NFTs
+* Contract that supports any game with tokenized assets following the ERC721 standard
+* Visualization of in-game inventory, directly on the platform
+
+## How it works
+* Games shall on-board to Trelix and deploy a separate ERC721 contract, where each token represents an in-game item.
+* New tokens are minted by the game servers to any user who gets an item in the game. In essence, each in-game item shall be converted to a tradable entity and trade is then facilitated by Trelix.
+* The games shall ensure that the ownership of the items as seen in the game is in direct sync with that on the chain. To ensure this, the game servers will fetch the latest assets owned by a user from the contract and populate the user’s inventory in the game. A player can also purchase listed items on Trelix. Once purchased, you will possess on-chain ownership of that asset. The game servers will fetch this information and subsequently, update your in-game inventory. 
+* Any item obtained by a player can be put up for sale from within the game. The game shall re-direct to Trelix, where he can put the item up for sale, specifying his proposed price. 
+
+Existing solutions like G2G and PlayerAuctions are platforms that facilitate the listing and viewing of items and getting the details to connect in-game. The actual trade itself happens in the game with the platforms acting as escrows, which has several shortcomings . In contrast, Trelix has the potential of converting each item into an actual tradable token, the exchange of which directly happens on Trelix. The possession of the token is equivalent to the possession of the item and trades are seamless.
+
+## Future work
+* Support for auctioning items
+* Partnering up with games
+* Support for ERC1155
+* API support game engines like Unity and UnrealEngine
+
 
 ## Available Scripts
 
-In the project directory, you can run:
-
-### `yarn start`
+### `npm run start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
