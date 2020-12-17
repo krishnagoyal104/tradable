@@ -1,18 +1,33 @@
 #explore-container {
+  
+}
+
+#explore-sub-container {
   display: flex;
   height: 100vh;
   padding-top: 30px;
 }
 
-#sidebar {
-  width: 200px;
-  position: fixed;
-  background-color: green;
-}
-
 #explore-asset-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  /*justify-content: space-around;
+  flex-wrap: wrap;*/
+  margin-bottom: 50px;
+  overflow-x: auto;
+}
+
+#explore-header {
+  margin-bottom: 50px;
+}
+
+#explore-game-name {
+  display: flex;
+  align-items: center;
+}
+
+#explore-game-name img {
+  height: 35px;
+  width: 35px;
+  object-fit: contain;
 }

@@ -6,8 +6,8 @@ const Sidebar = (props) => {
 
 	return(
     <div>
-      {list.map((item) => (
-        <p>{item}</p>
+      {list.map((item, index) => (
+        <p key={index}>{item}</p>
       ))}
     </div>
 	);

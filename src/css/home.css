@@ -9,7 +9,6 @@ h3 {
 
 .my_navbar span {
     font-size: 20px;
-    color: #7652ff;
 }
 
 .my_navbar.scrolled {
@@ -29,7 +28,7 @@ h3 {
     border-style: solid;
     border-radius: 12px;
     border-width: 2px 2px 2px 2px;
-    border-color: #7652ff;
+    border-color: white;
 }
 
 #header {
@@ -66,195 +65,6 @@ h3 {
 
 #logo:hover {
     cursor: pointer;
-}
-
-/* about */
-
-.about_page {
-    height: 30%;
-    padding: 50px 15px 50px 15px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.about_page h4 {
-    opacity: 0.8;
-}
-
-.list_container {
-    min-height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#card_container {
-
-}
-
-.card_text_container p {
-    font-size: 18px;
-}
-
-.info_card {
-    height: 350px;
-    width: 300px;
-    margin-bottom: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    border-bottom-width: 5px;
-    border-bottom-style: solid;
-    border-bottom-color: #40C4A6;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.info_card:hover {
-    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.card_one {
-    
-}
-
-.card_two {
-    border-bottom-color: #007ee5;
-}
-
-.card_three {
-    border-bottom-color: rgb(233, 66, 53);
-}
-
-.card_image_container {
-    height: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.card_text_container {
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.card_text_container h4 {
-    color: #0F47A6;
-}
-
-.card_button_container {
-    width: 100%;
-    padding-bottom: 5px;
-    display: flex;
-    justify-content: space-around;
-}
-
-.card_button {
-    height: 35px;
-    width: 80px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    border-radius: 5px;
-    border-style: solid;
-    border-color: #7652ff;
-}
-
-.card_button:hover {
-    cursor: pointer;
-}
-
-.arrow {
-    height: 15px;
-}
-
-.card_button span {
-    color: #7652ff;
-}
-
-/* project container */
-
-#products_section_header {
-    padding-bottom: 50px;
-    font-weight: 600;
-    color: #7652ff;
-}
-
-.project_section {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.project_header {
-    width: 100%;
-    margin-bottom: 40px;
-    display: flex;
-    align-items: center;
-}
-
-.project_header img {
-    height: 50px;
-    width: 50px;
-}
-
-.project_header h3 {
-    padding: 0 0 0 10px;
-    margin: 0px;
-    font-weight: 600;
-}
-
-.project_container {
-    padding: 0 0 50px 15px;
-}
-
-.project_left_container {
-    padding-left: 0px;
-}
-
-.project_right_container {
-    border-left-width: 5px;
-    border-left-style: solid;
-}
-
-#lendnetwork_border {
-    border-left-color: #40C4A6;
-}
-
-#stellarpay_border {
-    border-left-color: #007ee5;
-}
-
-#arbitrage_border {
-    border-left-color: #7652ff;
-}
-
-.project_image_wrapper {
-    padding-right: 50px;
-}
-
-.project_image {
-    width: 100%;
-}
-
-.project_info_wrapper {
-    height: 80%;
-    margin-left: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.project_description p {
-    font-size: 24px;
-    opacity: 0.8;
 }
 
 /* animation */

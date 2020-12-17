@@ -2,8 +2,10 @@
 @import './asset.css';
 @import './navbar.css';
 @import './explore.css';
-@import './sidebar.css';
 @import './list.css';
 @import './create.css';
 @import './input.css';
 @import './metamask.css';
+@import './assetView.css';
+@import './dashboard.css';
+@import './trades.css';

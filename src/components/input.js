@@ -3,9 +3,10 @@ import React from 'react';
 const Input = (props) => {
 
 	return(
-    <div class="form__group field">
-      <input type="input" class="form__field" placeholder={props.placeholder} name={props.name} id={props.name} required />
-      <label for={props.name} class="form__label">{props.name}</label>
+    <div className="form__group field">
+      <input type="number" className="form__field" placeholder={props.placeholder}
+      name={props.name} id={props.name} required onChange={(e) => props.onInput(e.target.value)} />
+      <label for={props.name} className="form__label">{props.name}</label>
     </div>
   );
   
