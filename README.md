@@ -1,4 +1,17 @@
 # Trelix: A marketplace for tradable relics
+
+## Available Scripts
+
+``` 
+# local development
+npm run start
+
+# production build
+npm run build
+cd build
+serve -s build
+```
+
 ## Overview
 
 Trelix is a marketplace for in-game digital goods like items, skins and collectibles, that facilitates de-centralized exchange of these assets as NFTs.
@@ -17,6 +30,7 @@ A large number of online multiplayer games provide in-game items with randomly g
 * The games shall ensure that the ownership of the items as seen in the game is in direct sync with that on the chain. To ensure this, the game servers will fetch the latest assets owned by a user from the contract and populate the user’s inventory in the game. A player can also purchase listed items on Trelix. Once purchased, you will possess on-chain ownership of that asset. The game servers will fetch this information and subsequently, update your in-game inventory. 
 * Any item obtained by a player can be put up for sale from within the game. The game shall re-direct to Trelix, where he can put the item up for sale, specifying his proposed price. 
 
+## Existing solutions
 Existing solutions like G2G and PlayerAuctions are platforms that facilitate the listing and viewing of items and getting the details to connect in-game. The actual trade itself happens in the game with the platforms acting as escrows, which has several shortcomings . In contrast, Trelix has the potential of converting each item into an actual tradable token, the exchange of which directly happens on Trelix. The possession of the token is equivalent to the possession of the item and trades are seamless.
 
 ## Future work
@@ -24,11 +38,3 @@ Existing solutions like G2G and PlayerAuctions are platforms that facilitate the
 * Partnering up with games
 * Support for ERC1155
 * API support game engines like Unity and UnrealEngine
-
-
-## Available Scripts
-
-### `npm run start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
