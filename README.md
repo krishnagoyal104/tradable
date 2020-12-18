@@ -3,12 +3,14 @@
 ## Available Scripts
 
 ``` 
+# install dependencies
+npm install
+
 # local development
 npm run start
 
 # production build
 npm run build
-cd build
 serve -s build
 ```
 
