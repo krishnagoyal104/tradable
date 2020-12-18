@@ -1,5 +1,5 @@
 # Trelix: A marketplace for tradable relics
-Check out website: http://trelix.co.in
+http://trelix.co.in
 
 ## Available Scripts
 
@@ -13,6 +13,22 @@ npm run start
 # production build
 npm run build
 serve -s build
+```
+
+## Contracts
+### Binance test net
+```
+# Token Contract:
+0xef2a21965b83Fb6d9d3D174789d8504B88359608
+# Trelix
+0x9d1898E224Cb068DAc499199674990A960D8CaD0
+```
+### Matic test net
+```
+# Token Contract
+0xB73764A8D20ceed6E372662F889BA7bE5D9c264c
+# Trelix
+0x676766FA21022d27992677CaF8Cde63036fBFe78
 ```
 
 ## Overview
