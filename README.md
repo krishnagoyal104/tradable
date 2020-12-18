@@ -1,4 +1,5 @@
 # Trelix: A marketplace for tradable relics
+Check out website: http://trelix.co.in
 
 ## Available Scripts
 
