@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import Asset from './asset';
-import {fetchOrders} from '../actions/orders';
+import {fetchTokensByUser} from '../actions/user';
 
 class Dashboard extends React.Component {
 
@@ -10,7 +10,7 @@ class Dashboard extends React.Component {
   }
 
   componentDidMount(){
-    this.props.dispatch(fetchOrders());
+    this.props.dispatch(fetchTokensByUser());
   }
 
   navigate = (_orderId) => {
@@ -20,14 +20,11 @@ class Dashboard extends React.Component {
   render(){
 
     const account = this.props.account;
-    let orders = this.props.orders;
-    orders = orders.filter((order) => {
-      return (order.buyer == account);
-    });
+    let tokens = this.props.tokens;
 
     const renderItems = () => {
-      return orders.map((item, index) => (
-        <Asset {...item} key={index} navigate={this.navigate} />
+      return tokens.map((item, index) => (
+        <Asset fromDashboard={true} {...item} key={index} navigate={this.navigate} />
       ));
     }
 
@@ -37,7 +34,7 @@ class Dashboard extends React.Component {
         <hr />
         <div id="dashboard-sub-container">
           <div className="container" id="dashboard-asset-container">
-            {orders.length > 0 ? renderItems() : <img id="dashboard-404" src="/images/404.png" />}
+            {tokens.length > 0 ? renderItems() : <img id="dashboard-404" src="/images/404.png" />}
           </div>
         </div>
       </div>
@@ -49,7 +46,7 @@ class Dashboard extends React.Component {
 const mapStateToProps = (state) => {
 	return{
 		account: state.account,
-    orders: state.orders,
+    tokens: state.user
 	};
 };
 

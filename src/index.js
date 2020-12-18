@@ -7,8 +7,6 @@ import App from './App';
 window.base_url = 'https://trelix.s3.ap-south-1.amazonaws.com';
 //import reportWebVitals from './reportWebVitals';
 
-window.network = 'private';
-
 App().then((Component) => {
 	ReactDOM.render(Component, document.getElementById('root'));
 });

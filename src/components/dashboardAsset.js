@@ -39,7 +39,7 @@ class DasboardAsset extends React.Component {
   }
 
   navigate = () => {
-    this.props.history.replace('/dashboard');
+    this.props.history.replace('/explore');
   }
 
   sell = (tokenId) => {  //not orderId
@@ -65,14 +65,14 @@ class DasboardAsset extends React.Component {
 
   render(){
 
-    const orderId = this.props.match.params.id;
-    let order = this.props.orders.filter((_order) => {
-      return _order.orderId == orderId;
+    const tokenId = this.props.match.params.id;
+    let token = this.props.tokens.filter((_token) => {
+      return _token.tokenId == tokenId;
     });
-    order = order[0];
+    token = token[0];
 
     const RenderDetails = () => {
-      const obj = order.metadata.item_details;
+      const obj = token.item_details;
       const keys = Object.keys(obj);
       const colors = ['red', 'blue', 'green', 'magenta'];
       return keys.map((key, index) => {
@@ -85,18 +85,18 @@ class DasboardAsset extends React.Component {
       });
     }
     
-    console.log(order, this.state);
+    console.log(token, this.state);
     
     return(
       <div className="container" id="view-container">
         <h4>Sell item</h4>
         <hr />
         <div id="view-container-top">
-          <img id="view-image" src={`https://trelix.s3.ap-south-1.amazonaws.com/icons/${order.tokenId}.png`} />
+          <img id="view-image" src={`https://trelix.s3.ap-south-1.amazonaws.com/icons/${token.tokenId}.png`} />
           <div id="view-metadata-container">
             <div>
-              <h1>{order.metadata.game_name || 'Path of Exile'}</h1>
-              <span>{order.metadata.item_id || '4663884-32'}</span>
+              <h1>{token.game_name || 'Path of Exile'}</h1>
+              <span>{token.item_id || '4663884-32'}</span>
             </div>
             <div>
               {
@@ -104,7 +104,7 @@ class DasboardAsset extends React.Component {
                 this.state.approved ?
                 (<div>
                   <Input name={"Price"} value={this.state.text} placeholder="Enter price" onInput={this.onInput} />
-                  <Button type="primary" onClick={() => this.sell(order.tokenId)}>
+                  <Button type="primary" onClick={() => this.sell(token.tokenId)}>
                     Sell item
                   </Button>
                 </div>) :
@@ -120,7 +120,7 @@ class DasboardAsset extends React.Component {
             <RenderDetails />
             <div id="view-details">
               <p>Token Id</p>
-              <Tag className="view-tag" color={'orange'}>{order.tokenId || ''}</Tag>
+              <Tag className="view-tag" color={'orange'}>{token.tokenId || ''}</Tag>
             </div>
           </div>
         </div>
@@ -133,8 +133,8 @@ class DasboardAsset extends React.Component {
 const mapStateToProps = (state) => {
 	return{
 		account: state.account,
-    orders: state.orders,
-    loading: state.loader
+    loading: state.loader,
+    tokens: state.user
 	};
 };
 

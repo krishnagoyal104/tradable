@@ -1,0 +1,212 @@
+{
+  "1": {
+    "game_name": "Path of Exile",
+    "item_id": "35a7442b-9a87",
+    "item_details": {
+      "Item name": "The Brass Dome",
+      "Item type": "Gladiator Plate",
+      "Armour": "1313",
+      "Movement speed": "-5%"
+    }
+  },
+  "2": {
+    "game_name": "Path of Exile",
+    "item_id": "55a7a20b-747a",
+    "item_details": {
+      "Item name": "Icetomb",
+      "Item type": "Latticed Ringmail",
+      "Armour": "111",
+      "Movement speed": "-5%"
+    }
+  },
+  "3": {
+    "game_name": "Path of Exile",
+    "item_id": "65a9b35a-747a",
+    "item_details": {
+      "Item name": "The Ivory Tower",
+      "Item type": "Saint's Hauberk",
+      "Armour": "598",
+      "Movement speed": "-10%"
+    }
+  },
+  "4": {
+    "game_name": "Path of Exile",
+    "item_id": "26c9b35a-898a",
+    "item_details": {
+      "Item name": "Shiversting",
+      "Item type": "Bastard Sword",
+      "Physical damage": "598",
+      "Critical strike chance": "5%"
+    }
+  },
+  "5": {
+    "game_name": "Path of Exile",
+    "item_id": "82b9b45a-764a",
+    "item_details": {
+      "Item name": "The Dancing Dervish",
+      "Item type": "Reaver Sword",
+      "Physical damage": "155",
+      "Critical strike chance": "15%"
+    }
+  },
+  "6": {
+    "game_name": "Path of Exile",
+    "item_id": "22c9b86c-361c",
+    "item_details": {
+      "Item name": "Atziri's Disfavour",
+      "Item type": "Vaal Axe",
+      "Physical damage": "370",
+      "Critical strike chance": "10%"
+    }
+  },
+  "7": {
+    "game_name": "Path of Exile",
+    "item_id": "94d9b64c-641a",
+    "item_details": {
+      "Item name": "The Crimson Storm",
+      "Item type": "Steelwood Bow",
+      "Physical damage": "116",
+      "Critical strike chance": "10%"
+    }
+  },
+  "8": {
+    "game_name": "Dota 2",
+    "item_id": "19b2342b-9c87",
+    "item_details": {
+      "Item name": "Golden Staff of Perplex",
+      "Item type": "Skin",
+      "Slot": "Weapon",
+      "Hero": "Rubick"
+    }
+  },
+  "9": {
+    "game_name": "Dota 2",
+    "item_id": "15a8943c-9c37",
+    "item_details": {
+      "Item name": "Golden Shards of Exile",
+      "Item type": "Skin",
+      "Slot": "Weapon",
+      "Hero": "Outworld Devourer"
+    }
+  },
+  "10": {
+    "game_name": "Dota 2",
+    "item_id": "09b2342b-9c87",
+    "item_details": {
+      "Item name": "Gilded Edge",
+      "Item type": "Skin",
+      "Slot": "Weapon",
+      "Hero": "Slark"
+    }
+  },
+  "11": {
+    "game_name": "Dota 2",
+    "item_id": "19b2342g-9c87",
+    "item_details": {
+      "Item name": "Golden Severing Crest",
+      "Item type": "Skin",
+      "Slot": "Head",
+      "Hero": "Razor"
+    }
+  },
+  "12": {
+    "game_name": "Dota 2",
+    "item_id": "18a2347d-9c87",
+    "item_details": {
+      "Item name": "Almond the Frondillo",
+      "Item type": "Skin",
+      "Slot": "Summoned Unit",
+      "Hero": "Juggernaut"
+    }
+  },
+  "13": {
+    "game_name": "Dota 2",
+    "item_id": "49b7742c-9c87",
+    "item_details": {
+      "Item name": "Golden Gravelmaw",
+      "Item type": "Skin",
+      "Slot": "Weapon",
+      "Hero": "Earthshaker"
+    }
+  },
+  "14": {
+    "game_name": "Dota 2",
+    "item_id": "77b5552b-8c87",
+    "item_details": {
+      "Item name": "Dark Artistry Cape",
+      "Item type": "Skin",
+      "Slot": "Back",
+      "Hero": "Invoker"
+    }
+  },
+  "15": {
+    "game_name": "Dark Souls 3",
+    "item_id": "56c6122b-7a12",
+    "item_details": {
+      "Item name": "Wolnir's Crown",
+      "Item type": "Helm",
+      "Armour": "127",
+      "Movement speed": "-8%"
+    }
+  },
+  "16": {
+    "game_name": "Dark Souls 3",
+    "item_id": "99a6146a-7a12",
+    "item_details": {
+      "Item name": "Cathedral Knight Helm",
+      "Item type": "Helm",
+      "Armour": "456",
+      "Movement speed": "-20%"
+    }
+  },
+  "17": {
+    "game_name": "Dark Souls 3",
+    "item_id": "16c6111b-1a12",
+    "item_details": {
+      "Item name": "Gundyr's Halberd",
+      "Item type": "Weapon",
+      "Attack": "236",
+      "Crit chance": "7%"
+    }
+  },
+  "18": {
+    "game_name": "Dark Souls 3",
+    "item_id": "29c2999b-7812",
+    "item_details": {
+      "Item name": "Dragonslayer Swordspear",
+      "Item type": "Weapon",
+      "Attack": "745",
+      "Crit chance": "25%"
+    }
+  },
+  "19": {
+    "game_name": "Dark Souls 3",
+    "item_id": "96c6122b-7a12",
+    "item_details": {
+      "Item name": "Lothric's Holy Sword",
+      "Item type": "Weapon",
+      "Attack": "451",
+      "Crit chance": "2%"
+    }
+  },
+  "20": {
+    "game_name": "Dark Souls 3",
+    "item_id": "66c61189b-0a12",
+    "item_details": {
+      "Item name": "Yorshka's Chime",
+      "Item type": "Chime",
+      "Attack": "147",
+      "Crit chance": "45%"
+    }
+  },
+  "21": {
+    "game_name": "Dark Souls 3",
+    "item_id": "4684565b-7a12",
+    "item_details": {
+      "Item name": "Golden Wing Crest Shield",
+      "Item type": "Shield",
+      "Armour": "788",
+      "Movement speed": "-15%"
+    }
+  }
+}

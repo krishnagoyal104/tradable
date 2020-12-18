@@ -1,12 +1,13 @@
 import Web3 from 'web3';
 import {ERC721_ABI, EXCHANGE_ABI} from './abi.js';
-import {RELIC_ADDRESS, EXCHANGE_ADDRESS} from '../config/config';
 
 const web3 = new Web3(Web3.givenProvider || "ws://localhost:8546");
 
-const tokenContract = new web3.eth.Contract(ERC721_ABI, RELIC_ADDRESS);
-const contract = new web3.eth.Contract(EXCHANGE_ABI, EXCHANGE_ADDRESS);
-//const faucet = new web3.eth.Contract(FAUCET_ABI, FAUCET_ADDRESS);
+let RELIC_ADDRESS;
+let EXCHANGE_ADDRESS;
+
+let tokenContract;
+let contract;
 
 export const enableMetamask = () => {
 	const promise = new Promise(async(resolve, reject) => {
@@ -24,8 +25,17 @@ export const enableMetamask = () => {
 export const getNetwork = () => {
 	const promise = new Promise(async(resolve, reject) => {
 		try{
-			const network = await web3.eth.net.getNetworkType();
-			if(network === window.network){
+			const network = await web3.eth.net.getId();
+			console.log(network);
+			if(network == 80001 || network == 97){
+				window.network = network;
+				console.log(window.network);
+				RELIC_ADDRESS = network == 80001 ? '0xB73764A8D20ceed6E372662F889BA7bE5D9c264c' : '0xef2a21965b83Fb6d9d3D174789d8504B88359608';
+				EXCHANGE_ADDRESS = network == 80001 ? '0x676766FA21022d27992677CaF8Cde63036fBFe78' : '0x9d1898E224Cb068DAc499199674990A960D8CaD0';
+				console.log('Token: ', RELIC_ADDRESS);
+				console.log('Exchange: ', EXCHANGE_ADDRESS);
+				tokenContract = new web3.eth.Contract(ERC721_ABI, RELIC_ADDRESS);
+				contract = new web3.eth.Contract(EXCHANGE_ABI, EXCHANGE_ADDRESS);
 				resolve();
 			}
 			else{
@@ -33,6 +43,7 @@ export const getNetwork = () => {
 			}
 		}
 		catch(e){
+			console.log(e);
 			reject(e);
 		}
 	});
@@ -184,6 +195,19 @@ export const cancelOrder = (account, orderId) => {
 	return promise;
 }
 
+export const getTokensByUser = (account) => {
+	const promise = new Promise(async(resolve, reject) => {
+		try{
+			const result = await tokenContract.methods.getTokensByUser(account).call();
+			resolve(result);
+		}
+		catch(e){
+			reject(e);
+		}
+	});
+	return promise;
+}
+
 export const fromWei = (amount) => {
 	try{
 		return Web3.utils.fromWei(amount.toString());
@@ -203,6 +227,9 @@ export const toWei = (amount) => {
 }
 
 export const search = (orders, name) => {
+	if(orders.length < 1){
+		return [];
+	}
 	const result = orders.filter((order) => {
 			return order.metadata.game_name == name;
 	});

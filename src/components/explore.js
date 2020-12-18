@@ -39,7 +39,7 @@ class Explore extends React.Component {
               <hr />
               <div className="container" id="explore-asset-container">
                 {data.length > 0 && data.map((item, index) => (
-                  <Asset {...item} key={index} navigate={this.navigate} />
+                  <Asset fromDashboard={false} {...item} key={index} navigate={this.navigate} />
                 ))}
               </div>
             </div>);

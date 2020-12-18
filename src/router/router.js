@@ -17,7 +17,6 @@ const Layout = (props) => {
       <Switch>
         <Route path="/" component={Home} exact />
 				<Route path="/explore" component={Explore} />
-				<Route path="/create" component={Create} />
 				<Route path="/view" component={AssetView} />
 				<Route path="/dashboard/asset/:id" component={DashboardAsset} />
 				<Route path="/dashboard" component={Dashboard} />

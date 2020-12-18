@@ -13,7 +13,6 @@ export const fetchOrders = () => {
   return async(dispatch) => {
     try{
       let orders = await getOrders();
-      console.log(orders);
       orders = attachMetadata(orders);
       dispatch(setOrders(orders));
     }

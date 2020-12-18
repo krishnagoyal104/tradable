@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+
 pragma solidity >=0.6.0 <0.8.0;
 
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol";
@@ -11,7 +13,7 @@ contract Relic is ERC721, Ownable {
     constructor(string memory _name, string memory _symbol) public ERC721(_name, _symbol) {}
 
     function mintTo(address player)
-        public onlyOwner
+        public ownlyOwner
         returns (uint256)
     {
         tokenId += 1;
@@ -27,6 +29,18 @@ contract Relic is ERC721, Ownable {
             _mint(owner(), _tokenId);
         }
         tokenId = _tokenId;
+    }
+    
+    function getTokensByUser(address _user) external view returns(uint256[] memory) {
+        uint256[] memory result = new uint256[](balanceOf(_user));
+        uint counter = 0;
+        for (uint i = 1; i <= tokenId; i++) {
+            if(ownerOf(i) == _user){
+                result[counter] = i;
+                counter++;   
+            }
+        }
+        return result;
     }
     
 }
