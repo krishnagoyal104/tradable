@@ -5,7 +5,7 @@ http://trelix.co.in
 
 ``` 
 # install dependencies
-npm install
+yarn
 
 # local development
 npm run start
@@ -16,14 +16,14 @@ serve -s build
 ```
 
 ## Contracts
-### Binance test net
+### BSC testnet
 ```
 # Collectable Contract (ERC721):
 0xef2a21965b83Fb6d9d3D174789d8504B88359608
 # Trelix
 0x9d1898E224Cb068DAc499199674990A960D8CaD0
 ```
-### Matic test net
+### Matic Mumbai testnet
 ```
 # Collectable Contract (ERC721)
 0xB73764A8D20ceed6E372662F889BA7bE5D9c264c

@@ -31,6 +31,13 @@ const Home = (props) => {
               <img id="logo" src="/images/logo.png" />
               <h1 id="header_text">Welcome to Trelix</h1>
               <h4>Buy and Sell digital relics</h4>
+              <div id="banner-container">
+                <h5>Powered by </h5>
+                {window.network == 'matic' ?
+                    <img id="banner-image-matic" src="/images/matic.png" /> :
+                    <img id="banner-image-binance" src="/images/binance.png" />
+                }
+              </div>
           </div>
       </section>
     </div>

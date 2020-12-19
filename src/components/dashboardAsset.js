@@ -2,11 +2,11 @@ import React from 'react';
 import {connect} from 'react-redux';
 import Button from 'antd/lib/button';
 import {approveItems, sellItem} from '../actions/tx';
-import {fromWei} from '../utils/index';
 import {withRouter} from 'react-router-dom';
 import Input from './input';
 import {fetchAllowance} from '../utils/index';
 import Tag from 'antd/lib/tag';
+import Loader from './loader';
 
 class DasboardAsset extends React.Component {
 
@@ -84,8 +84,8 @@ class DasboardAsset extends React.Component {
         );
       });
     }
-    
-    console.log(token, this.state);
+  
+    const label = window.network == 'matic' ? 'Price (matic)' : 'Price (bnb)';
     
     return(
       <div className="container" id="view-container">
@@ -100,10 +100,10 @@ class DasboardAsset extends React.Component {
             </div>
             <div>
               {
-                this.props.loading ? (<img id="view-loader" src="/images/loader.gif" />) :
+                this.props.loading ? (<Loader />) :
                 this.state.approved ?
                 (<div>
-                  <Input name={"Price"} value={this.state.text} placeholder="Enter price" onInput={this.onInput} />
+                  <Input name={label} value={this.state.text} placeholder="Enter price" onInput={this.onInput} />
                   <Button type="primary" onClick={() => this.sell(token.tokenId)}>
                     Sell item
                   </Button>

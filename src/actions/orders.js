@@ -1,5 +1,4 @@
 import {getOrders, getOrdersByUser} from '../utils/index';
-import {mapping} from '../config/config';
 import metadata from '../utils/metadata.json';
 
 export const setOrders = (orders) => {
@@ -32,6 +31,5 @@ export const attachMetadata = (orders) => {
     data.push(obj);
   });
   data.pop();
-  console.log(data);
   return data;
 }

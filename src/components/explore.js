@@ -27,11 +27,11 @@ class Explore extends React.Component {
     return(
       <div className="container" id="explore-container">
         <h4 id="explore-header">Buy Items</h4>
-        {games.map((game) => {
+        {games.map((game, index) => {
           let data = search(orders, game);
           if(data.length < 1) return;
           return(
-            <div>
+            <div key={index}>
               <div id="explore-game-name">
                 <img src={`/images/games/${game}.png`} />
                 <h5>{game}</h5>

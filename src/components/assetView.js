@@ -5,6 +5,7 @@ import {buyItem, cancelItem} from '../actions/tx';
 import {fromWei} from '../utils/index';
 import {withRouter} from 'react-router-dom';
 import Tag from 'antd/lib/tag';
+import Loader from './loader';
 
 class AssetView extends React.Component {
 
@@ -21,7 +22,7 @@ class AssetView extends React.Component {
   }
 
   navigate = () => {
-    this.props.history.replace('/dashboard');
+    this.props.history.replace('/inventory');
   }
 
   render(){
@@ -58,17 +59,20 @@ class AssetView extends React.Component {
               <p>In-game id: {order.metadata.item_id || '4663884-32'}</p>
             </div>
             <div>
+              {!isOwner && <p>Price: <b>{fromWei(order.price)} {window.network}</b></p>}
               {
-                this.props.loading ? <img id="view-loader" src="/images/loader.gif" /> :
+                this.props.loading ? <Loader /> :
                 isOwner ?
                 <Button type="primary" onClick={() => this.cancel(orderId)}>
                   Cancel sale
                 </Button> :
-                <Button type="primary" onClick={() => this.buy(orderId, order.price, this.navigate)}>
-                  Buy item Ξ {fromWei(order.price)}
-                </Button>
+                <div>
+                  <Button type="primary" onClick={() => this.buy(orderId, order.price, this.navigate)}>
+                    Buy item
+                  </Button>
+                  <p id="view-info">(Protocol fee is 2%)</p>
+                </div>
               }
-              <p id="view-info">(Protocol fee is 2%)</p>
             </div>
           </div>
         </div>
@@ -84,6 +88,10 @@ class AssetView extends React.Component {
             <div id="view-details">
               <p>Token Id</p>
               <Tag className="view-tag" color={'orange'}>{order.tokenId || ''}</Tag>
+            </div>
+            <div id="view-details">
+              <p>Chain info</p>
+              <Tag className="view-tag" color={'magenta'}>{window.network == 'matic' ? 'Matic' : 'Binance'}</Tag>
             </div>
           </div>
         </div>

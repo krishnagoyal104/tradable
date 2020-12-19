@@ -14,7 +14,7 @@ class Dashboard extends React.Component {
   }
 
   navigate = (_orderId) => {
-    this.props.history.push(`/dashboard/asset/${_orderId}`);
+    this.props.history.push(`/inventory/asset/${_orderId}`);
   }
 
   render(){

@@ -33,7 +33,7 @@ const columns = [
     title: 'Price',
     dataIndex: 'price',
     key: 'price',
-    render: text => <span>Ξ {fromWei(text)}</span>,
+    render: text => <span>{fromWei(text)} {window.network}</span>,
   },
   {
     title: 'Status',

@@ -19,3 +19,7 @@
 .navbar-link-text {
   color: white;
 }
+
+#navbar-network {
+  font-size: 14px;
+}

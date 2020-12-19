@@ -8,6 +8,7 @@ import AssetView from '../components/assetView';
 import Dashboard from '../components/dashboard';
 import Trades from '../components/trades';
 import DashboardAsset from '../components/dashboardAsset';
+import About from '../components/about';
 
 const Layout = (props) => {
 	const path = props.location.pathname;
@@ -18,10 +19,11 @@ const Layout = (props) => {
         <Route path="/" component={Home} exact />
 				<Route path="/explore" component={Explore} />
 				<Route path="/view" component={AssetView} />
-				<Route path="/dashboard/asset/:id" component={DashboardAsset} />
-				<Route path="/dashboard" component={Dashboard} />
+				<Route path="/inventory/asset/:id" component={DashboardAsset} />
+				<Route path="/inventory" component={Dashboard} />
 				<Route path="/asset/:id" component={AssetView} />
 				<Route path="/trades" component={Trades} />
+				<Route path="/about" component={About} />
       </Switch>
 		</div>
 	);

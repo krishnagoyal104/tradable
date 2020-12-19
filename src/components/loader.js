@@ -1,16 +1,12 @@
 import React from 'react';
-import {Spin, Icon} from '@ant-design/icons';
+import { Spin, Space } from 'antd';
 
 const Loader = (props) => {
-
-	const antIcon = <Icon type="sync" style={{ fontSize: props.size ? props.size : 60 }} spin />;
-
-	return(
-		<div id="loader" style={props.height && {height: '100%'}}>
-			<Spin indicator={antIcon} />
-		</div>
-	);
-
+  return(
+    <Space size="middle">
+      <Spin size="large" />
+    </Space>
+  );
 }
 
 export default Loader;

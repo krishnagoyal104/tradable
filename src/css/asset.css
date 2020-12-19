@@ -46,10 +46,14 @@
   object-fit: contain;
 }
 
-#issuer {
+#asset-issuer {
   font-size: 14px;
 }
 
-#name {
+#asset-name {
   font-size: 14px;
+}
+
+#asset-price {
+  font-size: 12px;
 }

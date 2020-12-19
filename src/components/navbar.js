@@ -1,4 +1,5 @@
 import React from 'react';
+import Tag from 'antd/lib/tag';
 
 const Navbar = (props) => {
 
@@ -18,7 +19,13 @@ const Navbar = (props) => {
                 <a className="nav-link" href="/trades"><span className="navbar-link-text">Trades</span></a>
             </li>
             <li className="nav-item">
-                <a className="nav-link" href="/dashboard"><span className="navbar-link-text">Dashboard</span></a>
+                <a className="nav-link" href="/inventory"><span className="navbar-link-text">Inventory</span></a>
+            </li>
+            <li className="nav-item">
+                <a className="nav-link" href="/about"><span className="navbar-link-text">About</span></a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link"><Tag id="navbar-network" color='red'>{window.network == 'matic' ? 'matic' : 'binance'} testnet</Tag></a>
             </li>
           </ul>
         </div>

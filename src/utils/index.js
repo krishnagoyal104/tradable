@@ -28,7 +28,7 @@ export const getNetwork = () => {
 			const network = await web3.eth.net.getId();
 			console.log(network);
 			if(network == 80001 || network == 97){
-				window.network = network;
+				window.network = network == 80001 ? 'matic' : 'bnb';
 				console.log(window.network);
 				RELIC_ADDRESS = network == 80001 ? '0xB73764A8D20ceed6E372662F889BA7bE5D9c264c' : '0xef2a21965b83Fb6d9d3D174789d8504B88359608';
 				EXCHANGE_ADDRESS = network == 80001 ? '0x676766FA21022d27992677CaF8Cde63036fBFe78' : '0x9d1898E224Cb068DAc499199674990A960D8CaD0';
